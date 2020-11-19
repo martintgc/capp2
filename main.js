@@ -7,7 +7,7 @@ $(document).ready(() => {
         return;
     }
 
-};)
+});
 
 function gum(candidate, device) {
     console.log("trying " + candidate.label + " on " + device.label);
