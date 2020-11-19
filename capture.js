@@ -3,8 +3,8 @@
   // width to the value defined here, but the height will be
   // calculated based on the aspect ratio of the input stream.
 
-  var width = 320;    // We will scale the photo width to this
-  var height = 0;     // This will be computed based on the input stream
+  var width = 2160;    // We will scale the photo width to this
+  var height = 3840;     // This will be computed based on the input stream
 
   // |streaming| indicates whether or not we're currently streaming
   // video from the camera. Obviously, we start at false.
@@ -36,13 +36,13 @@
 
     video.addEventListener('canplay', function(ev){
       if (!streaming) {
-        height = video.videoHeight / (video.videoWidth/width);
+        //height = video.videoHeight / (video.videoWidth/width);
       
         // Firefox currently has a bug where the height can't be read from
         // the video, so we will make assumptions if this happens.
       
         if (isNaN(height)) {
-          height = width / (4/3);
+         // height = width / (4/3);
         }
       
         video.setAttribute('width', width);
