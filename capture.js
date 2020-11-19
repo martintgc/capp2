@@ -28,7 +28,7 @@
     navigator.mediaDevices.getUserMedia({video: { facingMode: { exact: "environment" }, width:3840, height:2160 }, audio: false })
     .then(function(stream) {
       video.srcObject = stream;
-      video.play();
+      //video.play();
     })
     .catch(function(err) {
       console.log("An error occurred: " + err);
