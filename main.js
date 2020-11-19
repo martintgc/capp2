@@ -41,3 +41,16 @@ function gum(candidate, device) {
             });
     }, (stream ? 200 : 0));  //official examples had this at 200
 
+
+    function gotStream(mediaStream) {
+
+        //change the video dimensions
+        console.log("Display size for " + candidate.label + ": " + candidate.width + "x" + candidate.height);
+        video.width = candidate.width;
+        video.height = candidate.height;
+
+        window.stream = mediaStream; // make globally available
+        video.srcObject = mediaStream;
+
+    }
+}
