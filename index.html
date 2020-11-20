@@ -8,21 +8,40 @@
 	<script src="adapter-latest.js"></script>
 	<script src="main.js"></script>
 	<script src="capture.js"></script>
-	
+	<style>
+
+body {
+    background: black;
+}
+
+#videocanvas {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -180px 0 0 -240px;
+}
+</style>
 	
 
 </head>
 <body>
 <div class="contentarea">
-	<h1>
-		MDN - WebRTC: Still photo capture demo
-	</h1>
-	<p>
-		This example demonstrates how to set up a media stream using your built-in webcam, fetch an image from that stream, and create a PNG using that image.
-	</p>
+	
   <div class="camera">
+<canvas id="videocanvas">
+  </canvas>
     <video id="video">Video stream not available.</video>
-    <button id="startbutton">Take photo</button> 
+    <!-- <button id="startbutton">Take photo</button> -->
   </div>
   <canvas id="canvas">
   </canvas>
