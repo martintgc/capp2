@@ -25,6 +25,7 @@
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
 
+    //necessary attributes in order to play on ios / iphone
     video.setAttribute('autoplay', '');
     video.setAttribute('muted', '');
     video.setAttribute('playsinline', '');
