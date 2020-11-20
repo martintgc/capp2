@@ -28,6 +28,11 @@
     navigator.mediaDevices.getUserMedia({video: { facingMode: { exact: 'environment' }, width:3840, height:2160 }, audio: false })
     .then(function(stream) {
       video.srcObject = stream;
+      video.setAttribute("playsinline", true);
+      video.setAttribute("controls", true);
+      setTimeout(() => {
+          video.removeAttribute("controls");
+      });
       //video.play();
     })
     .catch(function(err) {
