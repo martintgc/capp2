@@ -53,8 +53,8 @@
          // height = width / (4/3);
         }
       
-        video.setAttribute('width', width);
-        video.setAttribute('height', height);
+        video.setAttribute('width', width/2);
+        video.setAttribute('height', height/2);
         canvas.setAttribute('width', width);
         canvas.setAttribute('height', height);
         streaming = true;
