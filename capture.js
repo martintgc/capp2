@@ -62,7 +62,7 @@
       }
     }, false);
 
-    startbutton.addEventListener('click', function(ev){
+    video.addEventListener('click', function(ev){
       takepicture();
       ev.preventDefault();
     }, false);
