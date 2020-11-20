@@ -25,7 +25,7 @@
     photo = document.getElementById('photo');
     startbutton = document.getElementById('startbutton');
 
-    navigator.mediaDevices.getUserMedia({video: { facingMode: { exact: "environment" }, width:3840, height:2160 }, audio: false })
+    navigator.mediaDevices.getUserMedia({video: { facingMode: { exact: 'environment' }, width:3840, height:2160 }, audio: false })
     .then(function(stream) {
       video.srcObject = stream;
       //video.play();
