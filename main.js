@@ -56,6 +56,7 @@ function gum(candidate, device) {
     }
     
     function checkFrame() {
+        console.log("checkFrame called")
         setTimeout(checkFrame, 100);  
         } 
         
