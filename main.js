@@ -31,7 +31,14 @@ function gum(candidate, device) {
 
     setTimeout(() => {
         navigator.mediaDevices.getUserMedia(constraints)
-            .then(gotStream)
+            .then(function(stream) {
+                    console.log("Display size for " + candidate.label + ": " + candidate.width + "x" + candidate.height);
+        video.width = candidate.width;
+        video.height = candidate.height;
+
+        window.stream = mediaStream; // make globally available
+        video.srcObject = mediaStream;
+        })
             .catch((error) => {
                 console.log('getUserMedia error!', error);
 
@@ -51,7 +58,7 @@ function gum(candidate, device) {
 
         window.stream = mediaStream; // make globally available
         video.srcObject = mediaStream;
-        setTimeout(checkFrame, 2000);
+
 
     }
     
