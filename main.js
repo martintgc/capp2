@@ -29,17 +29,9 @@ function gum(candidate, device) {
         }
     };
 
-    setTimeout(() => {
+    setTimeout(() => {console.log("loop");
         navigator.mediaDevices.getUserMedia(constraints)
-            .then(function(stream) {
-                    console.log("Display size for " + candidate.label + ": " + candidate.width + "x" + candidate.height);
-        video.width = candidate.width;
-        video.height = candidate.height;
-
-        window.stream = mediaStream; // make globally available
-        video.srcObject = mediaStream;
-            setTimeout(checkFrame, 2000);
-        })
+            .then(gotStream)
             .catch((error) => {
                 console.log('getUserMedia error!', error);
 
