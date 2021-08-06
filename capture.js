@@ -36,7 +36,7 @@
       
       setTimeout(() => {
           video.removeAttribute("controls");
-      });
+      }, (stream ? 200 : 0));
       video.play();
     })
     .catch(function(err) {
