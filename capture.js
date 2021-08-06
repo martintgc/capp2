@@ -37,7 +37,7 @@
       setTimeout(() => {
           video.removeAttribute("controls");
       });
-      //video.play();
+      video.play();
     })
     .catch(function(err) {
       console.log("An error occurred: " + err);
@@ -63,8 +63,8 @@
     }, false);
 
     video.addEventListener('click', function(ev){
-      takepicture();
-      ev.preventDefault();
+      //takepicture();
+      //ev.preventDefault();
     }, false);
     
     clearphoto();
