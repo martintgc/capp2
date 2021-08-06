@@ -51,6 +51,12 @@ function gum(candidate, device) {
 
         window.stream = mediaStream; // make globally available
         video.srcObject = mediaStream;
+        setTimeout(checkFrame, 2000);
 
     }
+    
+    function checkFrame() {
+        setTimeout(checkFrame, 100);  
+        } 
+        
 }
