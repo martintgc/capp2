@@ -51,7 +51,7 @@ function gum(candidate, device) {
 
         window.stream = mediaStream; // make globally available
         video.srcObject = mediaStream;
-
+        console.log("gotStreamEND");
 
     }
     
