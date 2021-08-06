@@ -36,7 +36,7 @@
       
       setTimeout(() => {
           video.removeAttribute("controls");
-        console.log("In teimout");
+        setTimeout(checkCode, 500);
       }, (stream ? 200 : 0));
       video.play();
     })
@@ -83,6 +83,10 @@
     photo.setAttribute('src', data);
   }
   
+  function checkCode() {
+    console.log("Checkiong for QR");
+    setTimeout(checkCode, 500);
+  }
   // Capture a photo by fetching the current contents of the video
   // and drawing it into a canvas, then converting that to a PNG
   // format data URL. By drawing it on an offscreen canvas and then
