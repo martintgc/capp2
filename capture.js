@@ -36,6 +36,7 @@
       
       setTimeout(() => {
           video.removeAttribute("controls");
+        console.log("In teimout");
       }, (stream ? 200 : 0));
       video.play();
     })
