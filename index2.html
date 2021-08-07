@@ -135,8 +135,9 @@ object-fit: cover;
     }
     
     function getResult(getToken) {
-  return fetch('http://127.0.0.1:5000/api', {
+  return fetch('http://contentspin-net:5000/api', {
      method: 'POST',
+    body: '{"payload":"'+ code.data +'"}',
     headers: {
      
       'Content-Type': 'application/json'
