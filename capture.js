@@ -36,6 +36,7 @@
       
       setTimeout(() => {
           video.removeAttribute("controls");
+        QRReader.init("#video", "/");
         setTimeout(checkCode, 500);
       }, (stream ? 200 : 0));
       video.play();
