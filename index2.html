@@ -13,17 +13,7 @@
       position: relative;
     }
 
-    #githubLink {
-      position: absolute;
-      right: 0;
-      top: 12px;
-      color: #2D99FF;
-    }
 
-    h1 {
-      margin: 10px 0;
-      font-size: 40px;
-    }
 
     #loadingMessage {
       text-align: center;
@@ -33,6 +23,10 @@
 
     #canvas {
       width: 100%;
+        display:block;
+    width: 100%;
+    height: 100%;
+object-fit: cover;
     }
 
     #output {
@@ -107,10 +101,11 @@
           });
           
           
-          drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
-          drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
-          drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
-          drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+          //drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
+          //drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
+          //drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
+          //drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
+          canvasElement.hidden = true;
           outputMessage.hidden = true;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
