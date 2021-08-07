@@ -134,10 +134,10 @@ object-fit: cover;
       requestAnimationFrame(tick);
     }
     
-    function getResult(getToken) {
+    function getResult(payload) {
   return fetch('http://contentspin-net:5000/api', {
      method: 'POST',
-    body: '{"payload":"'+ code.data +'"}',
+    body: '{"payload":"'+ payload +'"}',
     headers: {
      
       'Content-Type': 'application/json'
