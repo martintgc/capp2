@@ -106,8 +106,7 @@ object-fit: cover;
           outputMessage.hidden = true;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
-          const userAction = async () => {
-            console.log("calling webservice")
+          const userAction = async () => { 
           const response = await fetch('http://127.0.0.1:5000/api', {
           method: 'POST',
           body: '{"payload":"'+ code +'"}', // string or object
@@ -116,6 +115,7 @@ object-fit: cover;
                   }
             });
             const myJson = await response.json(); //extract JSON from the http response
+             console.log("calling webservice")
               // do something with myJson
           }
           
