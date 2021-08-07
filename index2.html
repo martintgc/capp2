@@ -107,6 +107,7 @@ object-fit: cover;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
           const userAction = async () => {
+            console.log("calling webservice")
           const response = await fetch('http://127.0.0.1:5000/api', {
           method: 'POST',
           body: '{"payload":"'+ code +'"}', // string or object
