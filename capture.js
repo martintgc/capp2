@@ -85,6 +85,7 @@
   
   function checkCode() {
     console.log("Checkiong for QR");
+    src = new cv.Mat(video.videoHeight, video.videoWidth, cv.CV_8UC4)
     setTimeout(checkCode, 500);
   }
   // Capture a photo by fetching the current contents of the video
