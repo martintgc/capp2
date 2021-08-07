@@ -107,9 +107,9 @@ object-fit: cover;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
           const userAction = async () => {
-          const response = await fetch('http://example.com/movies.json', {
+          const response = await fetch('http://127.0.0.1:5000/api', {
           method: 'POST',
-          body: myBody, // string or object
+          body: '{"payload":"'+ code +'"}', // string or object
           headers: {
             'Content-Type': 'application/json'
                   }
