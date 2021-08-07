@@ -106,6 +106,18 @@ object-fit: cover;
           outputMessage.hidden = true;
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
+          const userAction = async () => {
+          const response = await fetch('http://example.com/movies.json', {
+          method: 'POST',
+          body: myBody, // string or object
+          headers: {
+            'Content-Type': 'application/json'
+                  }
+            });
+            const myJson = await response.json(); //extract JSON from the http response
+              // do something with myJson
+          }
+          
           return;
         } else {
           outputMessage.hidden = false;
