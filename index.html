@@ -141,7 +141,11 @@ object-fit: cover;
         */
           fetch(endpoint, {
               method: 'POST',
-              
+              mode: 'cors',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+              },
               body: JSON.stringify(data)
           })
           .then((resp) => resp.blob())
