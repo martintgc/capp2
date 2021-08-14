@@ -111,6 +111,21 @@ object-fit: cover;
           console.log(code.data);
           }).catch(err => console.log(err))
           */
+          const data = {
+            message: 'We send a message to the backend with fetch()'
+            };
+          const endpoint = 'https://contentspin.net/api';
+
+          fetch(endpoint, {
+              method: 'POST',
+              body: JSON.stringify(data)
+          })
+          .then((resp) => resp.json())
+          .then(function(response) {
+              console.info('fetch()', response);
+              return response;
+          });
+          /*
           const userAction = async () => { 
           const response = await fetch('https://contentspin.net/api', {
           method: 'POST',
@@ -123,7 +138,7 @@ object-fit: cover;
              console.log("calling webservice")
               // do something with myJson
           }
-          
+          */
           return;
         } else {
           outputMessage.hidden = false;
