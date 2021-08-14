@@ -141,7 +141,10 @@ object-fit: cover;
         */
           fetch(endpoint, {
               method: 'POST',
-              body: JSON.stringify(data)
+              body: JSON.stringify(data),
+            headers: {
+            'Content-Type': 'application/json'
+                  }
           })
           .then((resp) => resp.blob())
           .then( blob => {
