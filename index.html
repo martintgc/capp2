@@ -135,7 +135,7 @@ object-fit: cover;
     }
     
     function getResult(payload) {
-  return fetch('http://contentspin.net:5000/api', {
+  return fetch('https://contentspin.net/api', {
      method: 'POST',
     body: '{"payload":"'+ payload +'"}',
     headers: {
