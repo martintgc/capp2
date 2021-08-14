@@ -127,7 +127,7 @@ object-fit: cover;
               .then(response => {
                   if (response.status === 200) {
                       filename = response.headers.get("content-disposition");
-                      filename = filename.match(/(?<=")(?:\\.|[^"\\])*(?=")/)[0];
+                      filename = filename.match('/(?<=")(?:\\.|[^"\\])*(?=")/')[0];
                       return response.blob();
                   } else {
                   return;
