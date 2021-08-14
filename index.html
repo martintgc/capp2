@@ -3,6 +3,7 @@
   <meta charset="utf-8">
   <title></title>
   <script src="./jsQR.js"></script>
+  <script src="./download.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
   <style>
    
@@ -117,6 +118,28 @@ object-fit: cover;
           const endpoint = 'https://contentspin.net/api';
 
           fetch(endpoint, {
+              method: "POST",
+              body: JSON.stringify(data),
+              headers: {
+                  "Content-Type": "application/json; charset=utf-8"
+              }
+              })
+              .then(response => {
+                  if (response.status === 200) {
+                      filename = response.headers.get("content-disposition");
+                      filename = filename.match(/(?<=")(?:\\.|[^"\\])*(?=")/)[0];
+                      return response.blob();
+                  } else {
+                  return;
+                  }
+              })
+              .then(body => {
+                  download(body, filename, "application/octet-stream");
+              });
+          };
+        
+        /*
+          fetch(endpoint, {
               method: 'POST',
               body: JSON.stringify(data)
           })
@@ -129,7 +152,7 @@ object-fit: cover;
            //   console.info('fetch()', response);
             //  return response;
           //});
-          
+          */
           
           /*
           const userAction = async () => { 
